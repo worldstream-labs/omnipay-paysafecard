@@ -1,0 +1,41 @@
+{
+    "name": "worldstream-labs/omnipay-paysafecard",
+    "type": "library",
+    "description": "Paysafecard driver for the Omnipay payment processing library",
+    "keywords": [
+        "gateway",
+        "merchant",
+        "paysafecard",
+        "omnipay",
+        "pay",
+        "payment"
+    ],
+    "autoload": {
+        "psr-4": {
+            "Omnipay\\Paysafecard\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Omnipay\\Paysafecard\\Test\\": "tests"
+        }
+    },
+    "require": {
+        "omnipay/common": "^3.0.1",
+        "ext-json": "*"
+    },
+    "require-dev": {
+        "omnipay/tests": "^3.1"
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "prefer-stable": true,
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mark Brouwers",
+            "email": "mb@worldstream.nl"
+        }
+    ]
+}
