@@ -1,0 +1,16 @@
+HTTP/1.1 201 Created
+Content-Type: application/json
+
+{
+  "object": "refund",
+  "id": "ref_1234",
+  "created": 1430137532383,
+  "updated": 1430137532383,
+  "currency": "EUR",
+  "amount": "10.00",
+  "customer": {
+    "id": "1000",
+    "email": "test@mail.com"
+  },
+  "status": "SUCCESSFULEUpdated"
+}

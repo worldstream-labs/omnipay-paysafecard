@@ -1,0 +1,21 @@
+HTTP/1.1 201 Created
+Content-Type: application/json
+
+{
+  "object": "PAYMENT",
+  "id": "pay_1000000007_Hukab77YIXzKUYMdgPDBQ986ihNUQChu_EUR",
+  "created": 1430137532383,
+  "updated": 1430137532383,
+  "amount": 10.00,
+  "currency": "EUR",
+  "status": "INITIATED",
+  "redirect": {
+    "success_url": "https://success",
+    "failure_url": "https://failure",
+    "auth_url": "https://dv.customer.paysafecard.com/psccustomer/GetCustomerPanelServlet?mid=1000000007&mtid=pay_1000000007_Hukab77YIXzKUYMdgPDBQ986ihNUQChu_EUR&amount=10.00&currency=EUR"
+  },
+  "customer": {
+    "id": "ICuCsrKUmg3pCpTyFNNrPR6K5k36P8Sv"
+  },
+  "notification_url": "https://notification"
+}

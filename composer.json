@@ -21,6 +21,7 @@
         }
     },
     "require": {
+        "php": "^7.1.0",
         "omnipay/common": "^3.0.1",
         "ext-json": "*"
     },
@@ -36,6 +37,10 @@
         {
             "name": "Mark Brouwers",
             "email": "mb@worldstream.nl"
+        },
+        {
+            "name": "Rory Scholman",
+            "email": "rory.scholman@worldstream.nl"
         }
     ]
 }
