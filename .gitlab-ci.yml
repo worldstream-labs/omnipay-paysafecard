@@ -1,0 +1,26 @@
+before_script:
+# Install dependencies
+- bash gitlabci/docker_install.sh > /dev/null
+- composer install --no-progress
+
+.unittest: &unittest
+  stage: test
+  script:
+    - vendor/bin/phpunit
+    - php code-coverage.php clover.xml 80
+
+unittest:7.1:
+  <<: *unittest
+  image: php:7.1
+
+unittest:7.2:
+  <<: *unittest
+  image: php:7.2
+
+unittest:7.3:
+  image: php:7.3
+  <<: *unittest
+
+unittest:7.4:
+  image: php:7.4
+  <<: *unittest
