@@ -63,6 +63,8 @@ This call will return the `AuthorizeResponse` object. If the call is succesful t
 Before you can capture the payment, make sure the payment is successfully authorized using the `fetchTransaction` call.
 
 ```php
+<?php
+
 $gateway = Omnipay::create('Paysafecard');
 $gateway->setApiKey('yourApiKey');
 
@@ -81,6 +83,8 @@ if ($response->getStatus === 'AUTHORIZED') {
 ### Refund
 [Optional] You can call validateRefund first. Quoted from Paysafecard: *"In order to make sure that the requested refund can continue, the business partner has to precheck the likeliness of the upcoming refund to be successful, there are certain conditions why a refund might be refused"*
  ```php
+<?php
+
 $gateway = Omnipay::create('Paysafecard');
 $gateway->setApiKey('yourApiKey');
 
@@ -110,6 +114,8 @@ if ($refundResponse->isSuccessful()) {
 or refund directly
 
 ```php
+<?php
+
 $gateway = Omnipay::create('Paysafecard');
 $gateway->setApiKey('yourApiKey');
 
