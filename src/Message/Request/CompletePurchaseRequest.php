@@ -3,13 +3,13 @@
 namespace Omnipay\Paysafecard\Message\Request;
 
 use Omnipay\Common\Message\ResponseInterface;
-use Omnipay\Paysafecard\Message\Response\PurchaseResponse;
+use Omnipay\Paysafecard\Message\Response\CompletePurchaseResponse;
 use Psr\Http\Message\ResponseInterface as HttpResponse;
 
-class PurchaseRequest extends AuthorizeRequest
+class CompletePurchaseRequest extends CaptureRequest
 {
     protected function getPaysafecardResponse(HttpResponse $response): ResponseInterface
     {
-        return new PurchaseResponse($this, $response);
+        return new CompletePurchaseResponse($this, $response);
     }
 }

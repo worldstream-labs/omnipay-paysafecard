@@ -1,0 +1,26 @@
+HTTP/1.1 200
+Content-Type: application/json
+
+{
+  "object": "PAYMENT",
+  "id": "pay_1000000007_Hukab77YIXzKUYMdgPDBQ986ihNUQChu_EUR",
+  "created": 1430205127021,
+  "updated": 1430206011382,
+  "amount": 10.00,
+  "currency": "EUR",
+  "status": "SUCCESS",
+  "type": "PAYSAFECARD",
+  "customer": {
+    "id": "ICuCsrKUmg3pCpTyFNNrPR6K5k36P8Sv"
+  },
+  "notification_url": "https://notification",
+  "card_details": [
+    {
+      "serial": "1453591278",
+      "currency": "EUR",
+      "amount": 10.00,
+      "type": "00002",
+      "country": "AT"
+    }
+  ]
+}
