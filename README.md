@@ -1,6 +1,6 @@
 # Omnipay: Paysafecard
 
-[![Build Status](https://travis-ci.org/worldstream-labs/omnipay-paysafecard.svg?branch=master)](https://travis-ci.org/worldstream-labs/omnipay-paysafecard)
+[![Build Status](https://travis-ci.org/worldstream-labs/omnipay-paysafecard.svg?branch=master)](https://travis-ci.org/worldstream-labs/omnipay-paysafecard) [![Latest Stable Version](https://poser.pugx.org/worldstream-labs/omnipay-paysafecard/v)](//packagist.org/packages/worldstream-labs/omnipay-paysafecard) [![Total Downloads](https://poser.pugx.org/worldstream-labs/omnipay-paysafecard/downloads)](//packagist.org/packages/worldstream-labs/omnipay-paysafecard) [![License](https://poser.pugx.org/worldstream-labs/omnipay-paysafecard/license)](//packagist.org/packages/worldstream-labs/omnipay-paysafecard)
 
 Paysafecard library for the Omnipay V3 payment library
 
