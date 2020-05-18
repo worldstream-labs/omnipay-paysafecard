@@ -1,5 +1,7 @@
 # Omnipay: Paysafecard
 
+[![Build Status](https://travis-ci.org/worldstream-labs/omnipay-paysafecard.svg?branch=master)](https://travis-ci.org/worldstream-labs/omnipay-paysafecard)
+
 Paysafecard library for the Omnipay V3 payment library
 
 ## Installation
