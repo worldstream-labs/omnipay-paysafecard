@@ -74,7 +74,7 @@ $response = $gateway->fetchTransaction([
     'payment_id' = $paymentId
 ])->send();
 
-if ($response->getStatus === 'AUTHORIZED') {
+if ($response->getStatus() === 'AUTHORIZED') {
     $captureResponse = $gateway->capture([
         'payment_id' = $paymentId
     ])->send();
