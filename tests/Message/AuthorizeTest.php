@@ -136,6 +136,7 @@ class AuthorizeTest extends TestCase
 
         $this->assertInstanceOf(AuthorizeResponse::class, $response);
         $this->assertFalse($response->isSuccessful());
+        $this->assertFalse($response->isRedirect());
         $this->assertEquals('{"code":"invalid_api_key","message":"Authentication failed","number":10008}', $response->getMessage());
 
         try {

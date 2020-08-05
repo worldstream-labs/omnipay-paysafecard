@@ -9,6 +9,10 @@ class PurchaseResponse extends AuthorizeResponse
      */
     public function isSuccessful(): bool
     {
-        return false;
+        if ($this->isRedirect()) {
+            return false;
+        }
+
+        return parent::isSuccessful();
     }
 }
