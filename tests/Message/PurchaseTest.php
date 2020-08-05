@@ -8,27 +8,46 @@ use Omnipay\Tests\TestCase;
 
 class PurchaseTest extends TestCase
 {
-    public function testSendDataWithSuccess()
-    {
-        $request = new PurchaseRequest($this->getHttpClient(), $this->getHttpRequest());
-        $request->initialize([
-            'currency' => 'EUR',
-            'amount' => 10.00,
-            'success_url' => 'https://success',
-            'failure_url' => 'https://failure',
-            'notification_url' => 'https://notification',
-            'customer_id' => '1234',
-        ]);
+    /**
+     * @var PurchaseRequest
+     */
+    private $request;
 
-        $apiKey = 'abc';
-        $request->setApiKey($apiKey);
+    public function setUp(): void
+    {
+        $this->request = new PurchaseRequest($this->getHttpClient(), $this->getHttpRequest());
+        $this->request->initialize([
+            'currency'         => 'EUR',
+            'amount'           => 10.00,
+            'success_url'      => 'https://success',
+            'failure_url'      => 'https://failure',
+            'notification_url' => 'https://notification',
+            'customer_id'      => '1234',
+            'apiKey'           => 'abc',
+        ]);
+    }
+
+    public function testSendDataWithSuccess(): void
+    {
         $this->setMockHttpResponse('AuthorizeSuccess.txt');
 
         /** @var PurchaseResponse $response */
-        $response = $request->send();
+        $response = $this->request->send();
 
         $this->assertInstanceOf(PurchaseResponse::class, $response);
         $this->assertFalse($response->isSuccessful());
         $this->assertTrue($response->isRedirect());
+    }
+
+    public function testSendDataWithFailure(): void
+    {
+        $this->setMockHttpResponse('AuthorizeFailure.txt');
+
+        /** @var PurchaseResponse $response */
+        $response = $this->request->send();
+
+        $this->assertInstanceOf(PurchaseResponse::class, $response);
+        $this->assertFalse($response->isSuccessful());
+        $this->assertFalse($response->isRedirect());
     }
 }
